@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  animation: animate-one 1000ms;
+}
+
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  animation: animate-one 1000ms;
+  flex-wrap: nowrap;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: white;
+  z-index: 10;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nav_logo img {
+  max-width: 350px;
+  height: 100px;
+  display: block;
+}
+
+.nav_logo h2 {
+  color: blueviolet;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.my-nav {
+  margin-left: 500px; 
+}
+
+.nav_menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav_menu li {
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+.nav_menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: red;
+}
+
+.nav_login_cart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.nav_login_cart button {
+  width: 120px;
+  height: 38px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 20px;
+  color: #515151;
+  font-size: 16px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.nav_login_cart button:active {
+  background: #f3f3f3;
+}
+
+.nav_cart_count {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -25px;
+  margin-left: -45px;
+  border-radius: 12px;
+  font-size: 16px;
+  background: red;
+  color: white;
+}
+
+@keyframes animate-one {
+  0%   { transform: scale(0); }
+  90%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.nav_login_cart span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b0082;
+  background: #f3e8ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 1px solid #6a0dad;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav_login_cart span:hover {
+  background: #e0c7ff;
+  color: #3a0066;
+  border-color: #4b0082;
+}
+
+.nav_login_cart img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.nav_login_cart img:hover {
+  transform: scale(0.9);
+}
+
+
+@media (max-width: 768px) {
+
+  /* navbar compact */
+  .Navbar {
+    padding: 6px 8px;
+    gap: 6px;
+    flex-wrap: nowrap;        
+    overflow-x: visible;
+    padding-right: 0%; 
+    padding-left: 0%;     
+  }
+
+  /* logo small and left */
+  .nav_logo {
+    gap: 6px;
+    margin-left: 4px;
+  }
+
+  .nav_logo img {
+    width: 80px;             
+    height: auto;
+    display: block;
+  }
+
+  .nav_logo h2 {
+    font-size: 13px;          
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+ 
+  .my-nav {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;          
+    min-width: 0;             
+  }
+
+ 
+  .nav_menu {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex: 0 1 auto;           
+    min-width: 0;
+    padding: 0 4px;
+    margin: 0;
+  }
+
+  
+ .nav_menu li {
+  display: inline-block;
+  flex: 0 0 auto;
+  font-size: 12px;
+  margin: 0 1px;   
+  padding: 0;      
+  white-space: nowrap;
+}
+
+
+  
+  .nav_login_cart {
+    margin-left: auto;        
+    margin-right: 6px;       
+    gap: 0px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+
+  .nav_login_cart button,
+  .nav_login_cart span {
+    font-size: 11px;
+    padding: 3px 6px;
+    min-width: 15px;
+    height: 20px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-right: 4px;
+  }
+
+  .nav_login_cart button {
+    width: auto;
+  }
+
+  
+  .nav_login_cart img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav_cart_count {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+    margin-left: -8px;
+    margin-top: 0;
+    border-radius: 7px;
+  }
+
+  
+  .Navbar, .my-nav, .nav_menu {
+    overflow: visible;
+  }
+
+  /* --- Mobile-only navbar fix --- */
+  .nav_logo_top {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+  .nav_logo_top img {
+    max-width: 180px;
+    height: 60px;
+  }
+
+  /* hide inline desktop logo when on mobile */
+  .Navbar .nav_logo {
+    display: none !important;
+  }
+}
+
+/* hide mobile logo on desktop */
+.nav_logo_top {
+  display: none;
+}

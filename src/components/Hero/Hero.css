@@ -1,0 +1,140 @@
+.hero {
+  height: 100vh;
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  display: flex;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 2rem;
+  line-height: 1.1;
+}
+
+.hero-left h2 {
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.hero-left p {
+  color: #171717;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 35px;
+  margin-top: 30px;
+  background: #ff4141;
+  color: white;
+  font-size: 22px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero-latest-btn:hover {
+  transform: scale(1.05);
+}
+
+.hero-right {
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.hero-dropdown {
+  margin-top: 10px;
+  background: #f3e8ff;
+  border: 1px solid #6a0dad;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero-dropdown-item {
+  padding: 12px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #6a0dad;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f3e8ff;
+}
+
+.hero-dropdown-item:not(:last-child) {
+  border-bottom: 1px solid #6a0dad;
+}
+
+.hero-dropdown-item:hover {
+  background: #e0c7ff;
+  color: #4b0082;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;             
+    padding: 0;                 
+    transform: none;
+    align-items: center;        
+    flex-direction: row;        
+    justify-content: space-between; 
+  }
+
+  .hero-left {
+    gap: 12px;
+  }
+
+  .hero-left h2 {
+    font-size: 14px;
+  }
+
+  .hero-left h1, 
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .hero-latest-btn {
+    width: 130px;
+    height: 35px;
+    font-size: 13px;
+    margin-top: 15px;
+  }
+
+  .hero-right {
+    margin-top: 0;            
+    justify-content: center;
+  }
+
+  .hero-right img {
+    max-width: 50%;            
+    height: auto;
+  }
+
+  .nav_login_cart span {
+    font-size: 12px !important;
+    padding: 3px 6px;
+  }
+
+  .hero-dropdown {
+    width: 140px !important;     
+  }
+
+  .hero-dropdown-item {
+    font-size: 14px;            
+    padding: 8px 10px;          
+  }
+}

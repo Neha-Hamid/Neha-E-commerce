@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "S:/FA21_BCE_068_B/Web_Technologies(Babar_Ali_Magsi)/Project"
+		},
+		{
+			"path": "S:/FA21_BCE_068_B/Web_Technologies(Babar_Ali_Magsi)/lab_task"
+		},
+		{
+			"path": "S:/FA21_BCE_068_B/Web_Technologies(Babar_Ali_Magsi)/Lab_work_2"
+		},
+		{
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "zongo"
+	}
+}
